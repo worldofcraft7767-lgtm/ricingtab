@@ -180,7 +180,7 @@
   <header>
     <span class="brand">RicingTab</span>
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective November 17, 2026 · applies to the RicingTab browser extension for Chrome, other Chromium browsers and Firefox</p>
+    <p class="meta">Effective November 17, 2026 (updated for version 1.0.49) · applies to the RicingTab browser extension for Chrome, other Chromium browsers and Firefox</p>
   </header>
 
   <div class="short" role="note">
@@ -189,7 +189,7 @@
       <li>No account, no ads, no analytics, no tracking. RicingTab has no server, so nothing about you is sent to us.</li>
       <li>Your layout, settings and your own backgrounds stay in your browser.</li>
       <li>Some features load public data (weather, prices, wallpapers, quotes) from the services listed below. The only thing you type that leaves your device is the city you enter for the weather.</li>
-      <li>In Firefox, shortcut icons are loaded from the shortcut sites themselves; for a site without its own icon, its domain name is sent to DuckDuckGo's icon service.</li>
+      <li>In Firefox, shortcut icons are loaded from the shortcut sites themselves; for a site without a sharp icon of its own, its domain name is sent to the Favicon.im icon service.</li>
       <li>Bookmarks and most-visited sites are read on your device only, and only if you allow it.</li>
     </ul>
   </div>
@@ -230,8 +230,8 @@
           <tr><td><a href="https://wallhaven.cc">Wallhaven</a></td><td>"Anime random" and "Wallpaper random" backgrounds</td><td>A request for safe-for-work wallpapers in the topics you picked (if any), then the chosen image and its small preview (th.wallhaven.cc)</td></tr>
           <tr><td><a href="https://picsum.photos">Picsum Photos</a></td><td>"Unsplash random" background</td><td>A request for a photo in your screen size and a small preview of it</td></tr>
           <tr><td><a href="https://www.jsdelivr.com">jsDelivr</a></td><td>Quote widget</td><td>A download of the public quotes collection</td></tr>
-          <tr><td>Your shortcut sites</td><td>Firefox only: showing your shortcuts' icons</td><td>A request for the site's own icon file (<code>/favicon.ico</code>), the same request the browser makes when you visit the site</td></tr>
-          <tr><td><a href="https://duckduckgo.com">DuckDuckGo</a></td><td>Firefox only: a shortcut site has no icon of its own</td><td>That site's domain name (for example <code>gemini.google.com</code>), to get its icon from icons.duckduckgo.com</td></tr>
+          <tr><td>Your shortcut sites</td><td>Firefox only: showing your shortcuts' icons</td><td>A request for the site's own icon files (<code>/favicon.ico</code>, <code>/apple-touch-icon.png</code>), the same requests the browser makes when you visit the site. For some popular sites the sharp official icon comes from that site's own image server (for Google services: gstatic.com)</td></tr>
+          <tr><td><a href="https://favicon.im">Favicon.im</a></td><td>Firefox only: a shortcut site has no sharp icon of its own (smaller than 64 px)</td><td>That site's domain name (for example <code>polymarket.com</code>), to get its icon from favicon.im</td></tr>
         </tbody>
       </table>
     </div>
@@ -241,7 +241,7 @@
     <h2>Search and site icons</h2>
     <p>The search box hands your query to the search engine you chose in your browser, the same way the address bar does. RicingTab doesn't see or store your searches.</p>
     <p><strong>Chrome and Chromium browsers:</strong> site icons come from your browser's own icon cache, so no outside service is asked for them. If a site has no icon yet, "Fetch icon" opens that site in a background tab for a moment, exactly as if you visited it, so the browser saves its icon.</p>
-    <p><strong>Firefox:</strong> Firefox doesn't share its icon cache with extensions, so RicingTab loads each shortcut's icon from the site itself. Only if the site has no icon of its own is the site's domain name sent to DuckDuckGo's icon service. Where each icon was found is remembered on your device for three days, so the icons are not looked up every time you open a new tab. No other information is sent with these requests.</p>
+    <p><strong>Firefox:</strong> Firefox doesn't share its icon cache with extensions, so RicingTab loads each shortcut's icon from the site itself. Only if the site has no sharp icon of its own (smaller than 64 px) is the site's domain name sent to the Favicon.im icon service. Where each icon was found is remembered on your device for three days, so the icons are not looked up every time you open a new tab. No other information is sent with these requests. If you press "Fetch icon" for a shortcut, RicingTab asks Firefox for access to that one site, reads its page and web app manifest to find the sharpest icon, and gives the access back right away.</p>
   </section>
 
   <section>
